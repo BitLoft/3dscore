@@ -5,6 +5,9 @@
 <body>
   {{> content}}
   {{> scoreButtons}}
+  <br>
+  <br>
+  {{> new_player}}
 </body>
 
 <template name="content">
@@ -16,7 +19,6 @@
   <input id ="5points" type="button" value="5 Points" />
   <input id ="8points" type="button" value="8 Points" />
   <input id ="10points" type="button" value="10 Points" />
-  <input id ="addPlayer" type="button" value="Add Player" />
 </template>
 
 <template name="player">
@@ -33,3 +35,10 @@
     {{/each}}
   </div>
   </template>
+
+  <template name="new_player">
+  <div class="new_player">
+    <input id="new_player_name" type="text" /> <br>
+    <input type="button" class="add" value="Add Player" />
+  </div>
+</template>
