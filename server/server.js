@@ -1,14 +1,14 @@
-if (Meteor.is_server) {
+if (Meteor.isserver) {
 
 Meteor.startup(function () {
 
     if (Players.find().count() === 0) {
       
       var names = [
-                    ["TJ Houston", 100],
-                   ["Ashley Clark", 90],
-                   ["Mike Clark", 80],
-                   ["Corbin Clark", 70]
+                    "TJ Houston",
+                   "Ashley Clark", 
+                   "Mike Clark", 
+                   "Corbin Clark"
                    
                   ];
 
