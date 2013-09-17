@@ -8,12 +8,28 @@
 </body>
 
 <template name="content">
-
-</template>
-<template name="scoreButtons">
   <h1>3d Hunt Scorer!</h1>
+  {{> leaderboard}}
+</template>
+
+<template name="scoreButtons">
   <input id ="5points" type="button" value="5 Points" />
   <input id ="8points" type="button" value="8 Points" />
   <input id ="10points" type="button" value="10 Points" />
-
+  <input id ="addPlayer" type="button" value="Add Player" />
 </template>
+
+<template name="player">
+  <div class="player {{selected}}">
+    <span class="name">{{name}}</span>
+    <span class="score">{{score}}</span>
+  </div>
+</template>
+
+<template name="leaderboard">
+  <div class="leaderboard">
+    {{#each players}}
+      {{> player}}
+    {{/each}}
+  </div>
+  </template>
